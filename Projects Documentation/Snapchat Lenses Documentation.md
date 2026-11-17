@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="https://via.placeholder.com/800x300.png?text=Snapchat+Lenses+Banner" width="100%" alt="Snapchat Lenses"/>
-  
-  <h1>Snapchat Lenses</h1>
+<h1>Snapchat Lenses</h1>
   <p><b>Interactive Augmented Reality Experiences via SnapAR</b></p>
 </div>
 
@@ -15,10 +13,6 @@ A collection of interactive Augmented Reality (AR) lenses developed using Snap's
 
 ## 🎥 Demo
 
-
-<div align="center">
-  <img src="https://via.placeholder.com/600x400.png?text=Lens+Demo+GIF" width="80%" alt="AR Demo"/>
-</div>
 
 ---
 

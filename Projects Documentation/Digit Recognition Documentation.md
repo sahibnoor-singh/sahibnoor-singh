@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="https://via.placeholder.com/800x300.png?text=Digit+Recognition+Banner" width="100%" alt="Digit Recognition"/>
-  
-  <h1>Handwritten Digit Recognition</h1>
+<h1>Handwritten Digit Recognition</h1>
   <p><b>Custom Machine Learning Model using Convolutional Neural Networks</b></p>
 </div>
 
@@ -15,10 +13,6 @@ This project implements a Convolutional Neural Network (CNN) from scratch (using
 
 ## 🎥 Demo
 
-
-<div align="center">
-  <img src="https://via.placeholder.com/600x400.png?text=Drawing+Canvas+Demo" width="80%" alt="Prediction Demo"/>
-</div>
 
 ---
 

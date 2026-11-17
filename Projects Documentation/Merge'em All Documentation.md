@@ -1,57 +1,42 @@
 <div align="center">
-  <img src="https://via.placeholder.com/800x300.png?text=Merge'em+All+Banner" width="100%" alt="Merge'em All"/>
-  
   <h1>Merge'em All</h1>
-  <p><b>Satisfying Puzzle Game Focused on Infinite Progression</b></p>
+  <p><b>Merge-and-deliver puzzle game with a level map</b></p>
 </div>
 
 <br/>
 
 ## 📌 Overview
 
-**Merge'em All** is a merge puzzle game where players combine identical items to create higher-tier objects. 
-
----
-
-## 🎥 Demo
-
-
-<div align="center">
-  <img src="https://via.placeholder.com/600x400.png?text=MergeEmAll+Demo+GIF" width="80%" alt="Gameplay Demo"/>
-</div>
+**Merge'em All** is a merge-and-deliver puzzle for Android (`com.kambogames.mergeemall`). Players merge toys on a board to fill delivery orders, progress through a level map, and collect daily rewards. It went through Voodoo's CPI testing and has since been updated several times for retention and performance.
 
 ---
 
 ## ✨ Features
 
-- **Infinite Progression:** Combine items infinitely to unlock rare tiers.
-- **Offline Earnings:** Idle mechanics allow players to earn currency while away.
-- **Daily Quests:** Integrated quest system to boost D1 and D7 retention.
+- **Merge puzzle with obstacles** (rocks, ice, delivery box) and power-ups.
+- **Level map** with locked levels, stars and a scrolling map; later levels are tuned harder using a simulated-player bot.
+- **Economy:** fewer free power-ups, daily rewards and a double-reward option, and a one-time **Remove Ads** purchase.
+- **Monetization:** AdMob rewarded and interstitial ads with consent.
+- **Smaller download:** build size reduced from 100 MB to 76 MB (texture compression and import-setting changes).
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Game Engine:** Unity
-- **Language:** C#
-- **Saving System:** Custom JSON serialization for save states.
-
----
-
-## 🏗 Architecture
-
-```mermaid
-graph TD
-    A[Merge Controller] --> B{Items Overlap?}
-    B -- Yes --> C{Are Items Same Tier?}
-    C -- Yes --> D[Destroy Old Items]
-    D --> E[Instantiate Next Tier]
-    E --> F[Update Save File]
-```
+- **Engine:** Unity 6, C#
+- **Services:** Google AdMob, Google Play Billing
 
 ---
 
 ## 📈 Challenges Faced
 
-- **Save File Corruption:** Players closing the app mid-merge could corrupt the JSON save state.
-  - **Solution:** Implemented a dual-save system (backup + main) and only wrote to disk during stable idle states.
+- **Map scrolling felt wrong on phones:** a duplicate scroll view sideways-scrolled the content. Removed it and fixed touch targets and drag thresholds.
+- **Out-of-moves flow bugs:** players could get stuck after "give up". Fixed the state handling and text overlap.
+- **Download size:** compressed textures and tuned import settings to cut 24 MB.
+
+---
+
+## 💡 What I Learned
+
+- Tuning difficulty with an automated player instead of guesswork.
+- Shipping updates safely: version codes, release notes and staged checks.

@@ -1,11 +1,11 @@
 <!-- ══════════════════════════════════════════════════════════ HEADER -->
 <h1 align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:0a0a0a,100:111827&height=160&section=header&text=Sahibnoor%20Singh&fontSize=46&fontColor=ffffff&fontAlignY=60&desc=Software%20Engineer%20%E2%80%A2%20Backend%20Developer%20%E2%80%A2%20Unity%20Game%20Developer&descAlignY=80&descSize=17&animation=fadeIn&v=2" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:0a0a0a,100:111827&height=160&section=header&text=Sahibnoor%20Singh&fontSize=46&fontColor=ffffff&fontAlignY=60&desc=Backend%20%26%20Cloud%20Developer%20%E2%80%A2%20Flutter%20Developer%20%E2%80%A2%20Unity%20Game%20Developer&descAlignY=80&descSize=17&animation=fadeIn&v=3" width="100%"/>
 </h1>
 
 <!-- ══════════════════════════════════════════════════════════ TYPING BANNER -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=2600&pause=900&color=FFFFFF&center=true&vCenter=true&width=860&lines=Building+StratGo+AI+%E2%80%94+Smart+Personal+Assistant;Founder+%40+Kambo+Game+Studio;Crafting+3D+Tactical+RTS+Experiences;Developing+Scalable+Spring+Boot+Backends;Building+Cross-Platform+Flutter+Apps" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=2600&pause=900&color=FFFFFF&center=true&vCenter=true&width=860&lines=Building+StratGo+AI+%E2%80%94+Smart+Personal+Assistant;Building+Pawlet+%E2%80%94+Your+Pet+on+Your+Desktop;Founder+%40+Kambo+Game+Studio;Research+Consultant+%40+WorldQuant+BRAIN;AWS+%C2%B7+Docker+%C2%B7+GitHub+Actions+%C2%B7+Terraform" />
 </p>
 
 <!-- ══════════════════════════════════════════════════════════ BADGES -->
@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white"/>
   </a>
   &nbsp;
-  <a href="./Resume.md">
+  <a href="./Resume.pdf">
     <img src="https://img.shields.io/badge/Resume-View_Resume-blue?style=flat-square&logo=read-the-docs&logoColor=white"/>
   </a>
 </p>
@@ -32,16 +32,18 @@
 ```text
 🎓  Education       Thapar Institute of Engineering and Technology (B.E. Computer Engineering '28)
 💼  Experience      Founder & Developer @ Kambo Game Studio (2025 - Present)
-💻  Backend         Java, Spring Boot, PostgreSQL, Elasticsearch, Docker
-📱  Mobile          Flutter, Dart, REST APIs
-🎮  Game Dev        Unity 2D/3D, AdMob SDK, TinySauce, Voodoo Publishing
-🤖  AI/ML           Google Gemini API, Python, CNNs
+📈  Quant           Research Consultant @ WorldQuant BRAIN (2026 - Present)
+💻  Backend         Java, Spring Boot, PostgreSQL, Elasticsearch, Cloudflare Workers + D1
+☁️  Cloud/DevOps    AWS (VPC, EC2, S3, IAM), Docker, GitHub Actions CI/CD, Terraform, Linux
+📱  Mobile/Desktop  Flutter, Dart, C#/WPF, REST APIs
+🎮  Game Dev        Unity 2D/3D, AdMob, Unity IAP, Voodoo CPI testing
+🤖  AI/ML           Google Gemini API, ONNX Runtime, Python, CNNs
 🧠  Philosophy      Build -> Ship -> Analyze -> Improve
 ```
 
 > **I build complete experiences—from scalable backends to engaging game mechanics.**
-> 
-> Whether it's architecting a robust Spring Boot service, crafting a fluid Flutter UI, or designing an addictive Unity game loop, I focus on delivering polished, production-ready products. I have hands-on experience running my own game studio, managing the complete production lifecycle, and working with top-tier publishing pipelines like Voodoo.
+>
+> Whether it's architecting a serverless backend, crafting a fluid Flutter UI, deploying a CI/CD pipeline on AWS, or designing an addictive Unity game loop, I focus on delivering polished, production-ready products. I run my own game studio, manage the full production lifecycle, and have taken games through Voodoo's CPI testing pipeline.
 
 ---
 
@@ -54,10 +56,20 @@
 ### 🕹️ Kambo Game Studio
 `Founder & Developer · 2025 – Present`
 
-Founded an independent Android game studio focused on developing and publishing mobile games using Unity.
-- Managed the complete production lifecycle: development, testing, release management, analytics (TinySauce), and monetization (AdMob).
-- Collaborated with **Voodoo's publishing pipeline** for CPI testing, user acquisition experiments, and game performance evaluation.
-- Successfully pushed multiple titles through Google Play closed testing to full production.
+Independent Android game studio building and publishing games in Unity.
+- Manages the complete production lifecycle: development, testing, release management, analytics, and monetization (AdMob, Unity IAP).
+- Took three games through **Voodoo's CPI testing**, then reworked onboarding, retention hooks, economy and ads for the 2026 Play Store updates.
+- Publisher on the **Unity Asset Store** with two game templates and recurring paid sales.
+
+</td>
+</tr>
+<tr>
+<td width="100%" valign="top">
+
+### 📈 WorldQuant BRAIN
+`Research Consultant · 2026 – Present`
+
+- Researches and submits quantitative alpha signals on the BRAIN platform as a paid consultant, with regular base-fee and quarterly performance payouts.
 
 </td>
 </tr>
@@ -72,24 +84,46 @@ Founded an independent Android game studio focused on developing and publishing 
 <td width="50%" valign="top">
 
 ### 🧠 StratGo AI
-`Flutter · Spring Boot · Gemini API`
+`Flutter · Cloudflare Workers · D1 · Gemini API`
 
-A full-stack AI-powered productivity application and smart personal assistant. 
-- Conversational task creation, editing, and deletion using Google Gemini API.
-- Deep integration with user calendar and chat history.
-- **Tech:** Java, Spring Boot, PostgreSQL, Docker, Google OAuth.
-- [Read the Development Docs](./Projects%20Documentation/StratGo%20Documentation.md)
+An offline-first personal-secretary planner for Android and web.
+- AI assistant (text, voice, photo/PDF import), ring-until-stopped alarms, widget, multi-reminders.
+- Google Play Billing subscriptions with server-side verification and signed offline leases.
+- Serverless backend on Cloudflare Workers + D1 (migrated from a Spring Boot / PostgreSQL / Docker prototype).
+- Try the [web app](https://stratgo-web.stratgo-bot.workers.dev) · [Development docs](./Projects%20Documentation/StratGo%20Documentation.md)
 
 </td>
 <td width="50%" valign="top">
 
-### 🏰 3D Tactical RTS
-`Unity · C# · URP`
+### 🐾 Pawlet
+`C# · WPF · .NET · ONNX Runtime`
 
-A mobile real-time strategy game featuring tactical troop deployment, AI-controlled combat, and persistent player progression.
-- Modular gameplay architecture using NavMesh AI and event-driven UI.
-- Complex upgrade systems (XP, Gold economy) and dynamic base progression.
-- [Read the Development Docs](./Projects%20Documentation/3D%20RTS%20Documentation.md)
+A Windows desktop pet that turns a photo of your real pet into an animated cartoon companion.
+- On-device ONNX models for background removal and species/breed recognition.
+- Low-CPU animation engine (~3% of one core), focus timer, installer and crash reporting.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+### 🏰 Reclaim Crown
+`Unity 6 · C# · URP`
+
+A hybrid-casual 3D tower war for Android: place your army, then watch the battle. In Google Play closed testing.
+- 50 levels, 9 troop types plus siege machines (ballista, catapult, ram), troop upgrades, destructible walls, gates and towers.
+- NavMesh battle AI, story intro, daily rewards, chests and a spin wheel.
+- [Development docs](./Projects%20Documentation/Reclaim%20Crown%20Documentation.md)
+
+<p align="center">
+  <img src="./Assets/reclaim-crown-feature.jpg" width="100%" alt="Reclaim Crown"/>
+</p>
+<p align="center">
+  <img src="./Assets/reclaim-crown-home.jpg" width="23%" />
+  <img src="./Assets/reclaim-crown-map.jpg" width="23%" />
+  <img src="./Assets/reclaim-crown-battle.jpg" width="23%" />
+  <img src="./Assets/reclaim-crown-victory.jpg" width="23%" />
+</p>
 
 </td>
 </tr>
@@ -102,33 +136,31 @@ A mobile real-time strategy game featuring tactical troop deployment, AI-control
 <table>
 <tr>
 <td width="50%" valign="top">
-  
+
 ### 🫧 Bubbly Bub
-`Hyper-Casual Game`
+`Bubble Shooter`
 
-A physics-based bubble shooter featuring 52 handcrafted levels.
-<br/>
-<img src="https://via.placeholder.com/400x200.png?text=Bubbly+Bub+Gameplay" width="100%" alt="Bubbly Bub Gameplay"/>
-<br/>
+A physics-based bubble shooter with 52 handcrafted levels.
 
-- **Integrations:** AdMob monetization, TinySauce analytics, Meta App Events.
+<img src="./Assets/bubblybub_feature_graphic.png" width="100%" alt="Bubbly Bub"/>
+
+- **Integrations:** AdMob, Remove Ads purchase, Play Store release.
 - **Tech Stack:** Unity, C#.
-- [View Full Documentation](./Projects%20Documentation/Bubbly%20Bub%20Documentation.md)
+- [Google Play](https://play.google.com/store/apps/details?id=com.kambogames.bubblybub) · [Documentation](./Projects%20Documentation/Bubbly%20Bub%20Documentation.md)
 
 </td>
 <td width="50%" valign="top">
-  
+
 ### 🧩 Match'em All
 `Tile Matching Game`
 
-A tile-matching puzzle game with optimized drag-and-drop mechanics and responsive UI scaling.
-<br/>
-<img src="https://via.placeholder.com/400x200.png?text=Match'em+All+Gameplay" width="100%" alt="Match'em All Gameplay"/>
-<br/>
+A tile-matching puzzle with a solvable-board generator, consent flow and level-map home screen.
 
-- **Business:** Configured user acquisition tracking and participated in Voodoo's publishing program.
-- **Tech Stack:** Unity, C#.
-- [View Full Documentation](./Projects%20Documentation/Match'em%20All%20Documentation.md)
+<img src="./Assets/matchemalllogo.png" width="30%" alt="Match'em All icon"/>
+
+- **Integrations:** AdMob, Unity IAP (Remove Ads).
+- **Business:** went through Voodoo's CPI test, then reworked for organic Play Store growth.
+- [Google Play](https://play.google.com/store/apps/details?id=com.kambogames.matchemall) · [Documentation](./Projects%20Documentation/Match'em%20All%20Documentation.md)
 
 </td>
 </tr>
@@ -138,8 +170,28 @@ A tile-matching puzzle game with optimized drag-and-drop mechanics and responsiv
 ### 📦 Merge'em All
 `Simulation / Merge Game`
 
-A merge-and-deliver simulation game featuring modular inventory systems and order management mechanics. Developed reusable Unity systems to accelerate future game production.
-- [View Full Documentation](./Projects%20Documentation/Merge'em%20All%20Documentation.md)
+A merge-and-deliver game in production with modular inventory systems and order management; build size reduced from 100 MB to 76 MB.
+- [Google Play](https://play.google.com/store/apps/details?id=com.kambogames.mergeemall) · [Documentation](./Projects%20Documentation/Merge'em%20All%20Documentation.md)
+
+</td>
+</tr>
+</table>
+
+---
+
+## ☁️ Cloud & DevOps
+
+<table>
+<tr>
+<td width="100%" valign="top">
+
+### 🔁 CI/CD Pipeline on AWS
+`AWS · Docker · GitHub Actions · Terraform`
+
+- Custom **VPC** with public/private subnets, route tables, internet gateway and a **bastion host**; EC2 and S3 via CLI.
+- Multi-stage **Docker** images, Docker Compose with Postgres and volumes, pushed to Docker Hub.
+- **GitHub Actions** pipeline: run tests, log in with secrets, build and push the image, then auto-deploy to EC2 over SSH.
+- **Terraform** for S3 and VPC provisioning (state, plan/apply/destroy).
 
 </td>
 </tr>
@@ -198,14 +250,12 @@ Published 6+ AR lenses using Lens Studio.
 ## 🏆 Achievements & Education
 
 - **Education:** B.E. in Computer Engineering, Thapar Institute of Engineering and Technology (CGPA: 7.44/10)
-- **Awards:** Semi Finalist — Tata Imagination Challenge 2025 | Unstop Talent Awards 2026
+- **Awards:** Semi Finalist — Tata Imagination Challenge 2025 | Winner — Unstop Talent Awards 2026
 
 ---
 
 ## 🛠 Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,flutter,dart,unity,cs,postgres,docker,git,python,elasticsearch" />
+  <img src="https://skillicons.dev/icons?i=java,spring,flutter,dart,unity,cs,dotnet,postgres,docker,git,python,elasticsearch,aws,terraform,githubactions,cloudflare,linux" />
 </p>
-
-

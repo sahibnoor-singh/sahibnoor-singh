@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="https://via.placeholder.com/800x300.png?text=AI+Project+Manager+Banner" width="100%" alt="AI Project Manager"/>
-  
-  <h1>AI Project Manager</h1>
+<h1>AI Project Manager</h1>
   <p><b>Intelligent Project Assistant powered by Elasticsearch and Java</b></p>
 </div>
 

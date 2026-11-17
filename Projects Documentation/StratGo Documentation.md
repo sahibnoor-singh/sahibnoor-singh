@@ -1,42 +1,37 @@
 <div align="center">
-  <img src="https://via.placeholder.com/800x300.png?text=StratGo+AI+Banner" width="100%" alt="StratGo AI"/>
-  
   <h1>StratGo AI</h1>
-  <p><b>Smart Personal Assistant & Productivity Application</b></p>
+  <p><b>Personal-secretary planner for Android and the web</b></p>
 </div>
 
 <br/>
 
 ## 📌 Overview
 
-**StratGo AI** is a full-stack, AI-powered productivity application designed to act as a smart personal assistant. It leverages the Google Gemini API to enable conversational task creation, intelligent scheduling, and seamless integration with calendar systems.
+**StratGo** is an offline-first planner that works like a personal secretary: tasks and events with multiple reminders, alarms that ring until stopped, repeating tasks, checklists, tags, a calendar, habits, and an AI assistant that creates tasks from text, voice, photos or PDFs.
 
----
-
-## 🎥 Demo
-
-<div align="center">
-  <img src="https://via.placeholder.com/600x400.png?text=StratGo+Flutter+App+Demo" width="80%" alt="App Demo"/>
-</div>
+- **Web app:** https://stratgo-web.stratgo-bot.workers.dev
+- **Android:** package `com.kambostudios.stratgo` (Google Play)
 
 ---
 
 ## ✨ Features
 
-- **Conversational Task Management:** Create, edit, and delete tasks simply by chatting with the AI.
-- **Contextual Scheduling:** The AI understands your calendar and chat history to suggest the optimal times for tasks.
-- **Background Notifications:** Robust background scheduling to ensure you never miss a deadline.
-- **Secure Authentication:** Integrated Google OAuth for seamless and secure user login.
+- **Quick add:** type "call bank tomorrow 5pm" and the task is created.
+- **Reminders that work:** several offsets from one week to one minute, ring-until-stopped alarms, snooze and Done buttons in the notification, a reminder-health screen.
+- **Planning:** repeating tasks, checklists, tags and filters, search, calendar with a Today button, habits with streaks.
+- **AI assistant:** text, voice, and photo/PDF import (fast multi-model import).
+- **Extras:** home-screen widget, wallpapers, local-only privacy mode, data export (CSV/JSON).
+- **Accounts and billing:** email, guest and Google sign-in; Google Play Billing subscriptions with server-side verification and a signed 72-hour offline lease.
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend:** Flutter, Dart
-- **Backend:** Java, Spring Boot
-- **Database:** PostgreSQL
-- **AI Integration:** Google Gemini API
-- **Deployment & Auth:** Docker, Google OAuth, REST APIs
+- **App:** Flutter, Dart (Android and web from one codebase)
+- **Backend:** Cloudflare Workers with a D1 database (accounts, sync, assistant, plans, billing, cron-driven reminders)
+- **AI:** Gemini API and Groq models
+- **Payments and auth:** Google Play Billing, Google sign-in, JWT
+- **History:** an earlier prototype used Spring Boot, PostgreSQL and Docker (now retired in favour of the serverless backend)
 
 ---
 
@@ -44,28 +39,26 @@
 
 ```mermaid
 graph TD
-    A[Flutter Frontend] -->|REST API Requests| B[Spring Boot Backend]
-    B --> C[PostgreSQL Database]
-    B --> D[Google Gemini API]
-    A --> E[Google OAuth Server]
-    B --> F[Notification Scheduler]
-    
-    D -->|Contextual NLP Analysis| B
+    A[Flutter app: Android + web] -->|REST| B[Cloudflare Worker API]
+    B --> C[(D1 database)]
+    B --> D[Gemini / Groq]
+    B --> E[Play subscription verification]
+    A --> F[Local storage: offline-first sync]
+    B -->|cron every minute| G[Reminders]
 ```
 
 ---
 
 ## 📈 Challenges Faced
 
-1. **Context Window Management:** Keeping track of the user's schedule across long conversational interactions with the Gemini API without exceeding token limits.
-   - **Solution:** Implemented a rolling context window in the Spring Boot backend that summarizes past interactions and only feeds the immediate upcoming calendar events to the LLM.
-2. **Cross-Platform Background Tasks:** Ensuring background notifications fired reliably on both iOS and Android via Flutter.
-   - **Solution:** Utilized native platform channels to tie the Spring Boot scheduling triggers directly into the OS-level alarm managers.
+1. **Sync that never resurrects deleted data:** the first version brought deleted tasks back after going online. Redesigned the offline-first sync so deletions always win.
+2. **Reliable alarms on Android:** moved to several reminder offsets, ring-until-stopped alarms and notification actions, plus a health screen that explains missing permissions.
+3. **Zero-cost infrastructure:** replaced a free-tier Java host and external database with Cloudflare Workers and D1, cutting running cost to free tiers.
 
 ---
 
 ## 💡 What I Learned
 
-- Designing robust microservice-oriented architectures using Spring Boot and Docker.
-- Advanced prompt engineering with the Gemini API to force strictly structured JSON responses for task creation.
-- Seamlessly bridging a Dart/Flutter UI with a Java backend.
+- Designing offline-first sync and signed offline leases for subscriptions.
+- Server-side verification of Play purchases, renewals and refunds.
+- Prompting LLMs to return strictly structured JSON for task creation.

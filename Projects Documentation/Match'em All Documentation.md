@@ -1,62 +1,40 @@
 <div align="center">
-  <img src="../Assets/matchemalllogo.png" width="100%" alt="Match'em All Banner"/>
-  
   <h1>Match'em All</h1>
-  <p><b>Vibrant Tile-Matching Game Optimized for Performance</b></p>
+  <p><b>Tile-matching puzzle with a solvable-board generator</b></p>
 </div>
 
 <br/>
 
 ## 📌 Overview
 
-**Match'em All** is a visually vibrant tile-matching puzzle game designed for casual mobile gamers. The core focus was on creating a highly responsive and satisfying player experience with scalable mechanics.
-
----
-
-## 🎥 Demo
-
-
-<div align="center">
-  <a href="https://github.com/sahibnoor-singh/sahibnoor-singh/raw/main/Assets/MatchemAll_ad1.mp4">
-    <img src="https://via.placeholder.com/600x400.png?text=Click+to+Watch+Gameplay+Video" width="80%" alt="Watch Gameplay Demo"/>
-  </a>
-  <p><i>(Click image to watch gameplay video)</i></p>
-</div>
+**Match'em All** is a tile-matching puzzle for Android (`com.kambogames.matchemall`). It went through Voodoo's CPI testing, and was then reworked for organic Play Store growth: a new level-map home screen, safer monetization and boards that can always be solved.
 
 ---
 
 ## ✨ Features
 
-- **Juicy Feedback:** Screen shakes, particle bursts, and satisfying audio cues on every match.
-- **Dynamic Board Generation:** Algorithmic level generation ensuring solvable puzzles.
-- **Performance Optimized:** Runs at 60 FPS on low-end Android devices.
+- **Solvable boards:** boards are built in reverse, so every level can be completed, and Shuffle keeps the board solvable.
+- **Level map home screen** with hearts, coins, a profile avatar, shop, daily reward and spin.
+- **Monetization:** AdMob with a consent flow and ad pacing (from level 4, every second level, at least 90 seconds apart), a rewarded "Continue" that undoes three tiles (two per level), and a one-time **Remove Ads** purchase.
+- **Levels cycle** after level 50 so players never run out.
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Game Engine:** Unity
-- **Language:** C#
-- **Patterns:** Observer Pattern (for UI updates), Factory Pattern (for tile generation).
-
----
-
-## 🏗 Architecture
-
-```mermaid
-graph TD
-    A[Grid Manager] --> B[Tile Factory]
-    B --> C{Generate Level}
-    C --> D[Input Controller]
-    D --> E{Match Found?}
-    E -- Yes --> F[Score Manager]
-    E -- Yes --> G[VFX Manager]
-    F --> H[UI Update via Events]
-```
+- **Engine:** Unity 6, C#
+- **Services:** Google AdMob (UMP consent), Unity IAP, Google Play Billing
 
 ---
 
 ## 📈 Challenges Faced
 
-- **Recursive Match Checking:** Initially, checking for large combo matches caused recursive stack overflows.
-  - **Solution:** Rewrote the match-checking algorithm to use an iterative Breadth-First Search (BFS) approach instead of recursion.
+- **Unwinnable boards and stuck levels:** random icon shuffling could create boards that couldn't be solved. Replaced it with a reverse-built board generator and fixed empty, mismatched and ghost-tile cases.
+- **Retention:** the first build had weak return rates. Reworked the home screen, rewards and ad pacing for the next release.
+
+---
+
+## 💡 What I Learned
+
+- Generating puzzles by working backwards from a solved state.
+- Balancing ads and purchases without hurting the first-session experience.
